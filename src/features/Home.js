@@ -34,6 +34,32 @@ export default class Home extends Component {
 
     }
 
+    componentDidMount() {
+        this.getInitial();
+    }
+
+
+    getInitial() {
+        firebase.auth().onAuthStateChanged(user => {
+
+            if (user) {
+
+                firebase.firestore().collection('photos').onSnapshot(snapshot => {
+                    let allPhotos = [];
+                    snapshot.forEach(doc => {
+                      var newItem = doc.data();
+                      newItem.id = doc.id;
+                      allPhotos.push(newItem);
+                    });
+
+                    this.setState({ allPhotos });
+                });
+
+            }
+
+        });
+
+    }
 
     handleLogout() {
         logout()
