@@ -9,15 +9,15 @@ constructor(props) {
 const allPhotos = [
          {
           id: 'randomstringimadeup43454356546',
-          url: 'https://www.google.co.uk/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwidrJibjercAhVJLMAKHcYaB40QjRx6BAgBEAU&url=https%3A%2F%2Fofficialpsds.com%2Fhulk-png-r3vyk0&psig=AOvVaw2ifAACBNl_0Yfm0WRblr9y&ust=1534252254303944'
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTieJqq6tVfz6zpwyhgOlXV5gJvxBYpMI0oWojUuwAA-kUJoVI87Q'
          },
          {
           id: 'randomstringimadeup43523526534565',
-          url: 'https://www.google.co.uk/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwidrJibjercAhVJLMAKHcYaB40QjRx6BAgBEAU&url=https%3A%2F%2Fofficialpsds.com%2Fhulk-png-r3vyk0&psig=AOvVaw2ifAACBNl_0Yfm0WRblr9y&ust=1534252254303944'
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTieJqq6tVfz6zpwyhgOlXV5gJvxBYpMI0oWojUuwAA-kUJoVI87Q'
          },
          {
           id: 'randomstringimadeup433245234534',
-          url: 'https://www.google.co.uk/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwidrJibjercAhVJLMAKHcYaB40QjRx6BAgBEAU&url=https%3A%2F%2Fofficialpsds.com%2Fhulk-png-r3vyk0&psig=AOvVaw2ifAACBNl_0Yfm0WRblr9y&ust=1534252254303944'
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTieJqq6tVfz6zpwyhgOlXV5gJvxBYpMI0oWojUuwAA-kUJoVI87Q'
          }
         ]
 this.state = {
