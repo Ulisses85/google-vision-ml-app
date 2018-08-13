@@ -16,7 +16,7 @@ const Root = () => {
     <Route path="/app/home" component={Home} />
     <Redirect from="/" to="/login" />
    </Switch>
-  </Router> 
+  </Router>
  )
 }
 ReactDOM.render(<Root />, document.getElementById('root'));
