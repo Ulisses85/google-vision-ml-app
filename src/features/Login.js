@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-export default class Login extends Component {
+export default class Home extends Component {
  render() {
   return (
-   <div>This is my Login component</div>
+   <div>this is my Login component</div>
   );
  }
 }
