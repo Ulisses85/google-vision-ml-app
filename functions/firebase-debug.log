@@ -1,0 +1,32 @@
+[debug] [2018-08-13T17:32:52.287Z] ----------------------------------------------------------------------
+[debug] [2018-08-13T17:32:52.289Z] Command:       /usr/local/bin/node /usr/local/bin/firebase experimental:functions:shell
+[debug] [2018-08-13T17:32:52.289Z] CLI Version:   3.17.4
+[debug] [2018-08-13T17:32:52.289Z] Platform:      darwin
+[debug] [2018-08-13T17:32:52.289Z] Node Version:  v8.11.3
+[debug] [2018-08-13T17:32:52.290Z] Time:          Mon Aug 13 2018 18:32:52 GMT+0100 (BST)
+[debug] [2018-08-13T17:32:52.290Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-13T17:32:52.299Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-13T17:32:52.299Z] > authorizing via signed-in user
+[debug] [2018-08-13T17:32:52.301Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/vision-ml-react-app  
+  
+ Mon Aug 13 2018 18:32:52 GMT+0100 (BST)
+[debug] [2018-08-13T17:32:52.948Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-13T17:32:52.949Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/vision-ml-react-app/tokens  
+  
+ Mon Aug 13 2018 18:32:52 GMT+0100 (BST)
+[debug] [2018-08-13T17:32:53.477Z] <<< HTTP RESPONSE 200
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-08-13T17:32:54.004Z] Fetching environment
+[debug] [2018-08-13T17:32:54.006Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/vision-ml-react-app  
+  
+ Mon Aug 13 2018 18:32:54 GMT+0100 (BST)
+[debug] [2018-08-13T17:32:54.007Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/vision-ml-react-app/apiKeys  
+  
+ Mon Aug 13 2018 18:32:54 GMT+0100 (BST)
+[debug] [2018-08-13T17:32:54.908Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-13T17:32:54.924Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-13T17:32:54.924Z] Starting @google-cloud/functions-emulator
+[debug] [2018-08-13T17:32:55.972Z] Parsing function triggers
+[debug] [2018-08-13T17:32:56.613Z] Deploying functions locally
+[info] ✔  functions: addSimilarImages
