@@ -11,28 +11,14 @@ export default class Home extends Component {
     constructor(props) {
         super(props);
 
-        const allPhotos = [
-        	{
-        		id: 'randomstringimadeup43454356546',
-        		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTieJqq6tVfz6zpwyhgOlXV5gJvxBYpMI0oWojUuwAA-kUJoVI87Q'
-        	},
-        	{
-        		id: 'randomstringimadeup43523526534565',
-        		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTieJqq6tVfz6zpwyhgOlXV5gJvxBYpMI0oWojUuwAA-kUJoVI87Q'
-        	},
-        	{
-        		id: 'randomstringimadeup433245234534',
-        		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTieJqq6tVfz6zpwyhgOlXV5gJvxBYpMI0oWojUuwAA-kUJoVI87Q'
-        	}
-        ]
-
         this.state = {
-          allPhotos
+          allPhotos: []
         };
 
         this.handleLogout = this.handleLogout.bind(this);
-
+        this.getInitial = this.getInitial.bind(this);
     }
+
 
     componentDidMount() {
         this.getInitial();
@@ -60,6 +46,7 @@ export default class Home extends Component {
         });
 
     }
+
 
     handleLogout() {
         logout()
@@ -91,7 +78,8 @@ export default class Home extends Component {
             }
             console.log('newPhoto', newPhoto);
 
-            await firebase.firestore().collection('photos').add(newPhoto);
+            let photoAdded = await firebase.firestore().collection('photos').add(newPhoto);
+            console.log('photoAdded', photoAdded);
         }
 
         catch(err) {
@@ -102,54 +90,54 @@ export default class Home extends Component {
 
 
 
-render() {
+	render() {
 
-	// our doppelganger images
-const allImages = this.state.allPhotos.map(photo => {
+		// our doppelganger images
+        const allImages = this.state.allPhotos.map(photo => {
 
-  return (
-    <div key={photo.id}>
-      <div style={{minHeight: '215px'}}>
-	<i className="bottom-icon material-icons main-close">close</i>
-	<Image style={{ width: '100%' }} src={photo.url} responsive />
-      </div>
-    </div>
-  );
-})
+          return (
+            <div key={photo.id}>
+              <div style={{minHeight: '215px'}}>
+                <i className="bottom-icon material-icons main-close">close</i>
+                <Image style={{ width: '100%' }} src={photo.url} responsive />
+              </div>
+            </div>
+          );
+        })
 
-	return (
-		<div>
-			{allImages}
+		return (
+			<div>
+				{allImages}
 
-			<Grid className="bottom-nav">
-			  <Row className="show-grid">
-			    <Col xs={4} className="col-bottom">
-				<Link to="/app/album"><i className="bottom-icon material-icons">collections</i></Link>
-			    </Col>
-			    <Col xs={4} className="col-bottom">
+				<Grid className="bottom-nav">
+				  <Row className="show-grid">
+				    <Col xs={4} className="col-bottom">
+				        <Link to="/app/album"><i className="bottom-icon material-icons">collections</i></Link>
+				    </Col>
+				    <Col xs={4} className="col-bottom">
 
-		<label>
-		   <i className="bottom-icon material-icons">camera_alt</i>
-		   <FileUploader
-		     hidden
-		     accept="image/*"
-		     storageRef={firebase.storage().ref('images')}
-		     onUploadStart={this.handleUploadStart}
-		     onUploadError={this.handleUploadError}
-		     onUploadSuccess={this.handleUploadSuccess}
-		     onProgress={this.handleProgress}
-		   />
-		 </label>
+                        <label>
+                           <i className="bottom-icon material-icons">camera_alt</i>
+                           <FileUploader
+                             hidden
+                             accept="image/*"
+                             storageRef={firebase.storage().ref('images')}
+                             onUploadStart={this.handleUploadStart}
+                             onUploadError={this.handleUploadError}
+                             onUploadSuccess={this.handleUploadSuccess}
+                             onProgress={this.handleProgress}
+                           />
+                         </label>
 
 
-			    </Col>
-			    <Col onClick={this.handleLogout} xs={4} className="col-bottom">
-			      <i className="bottom-icon material-icons">assignment_return</i>
-			    </Col>
-			  </Row>
-			</Grid>
+				    </Col>
+				    <Col onClick={this.handleLogout} xs={4} className="col-bottom">
+				      <i className="bottom-icon material-icons">assignment_return</i>
+				    </Col>
+				  </Row>
+				</Grid>
 
-		</div>
-	);
-}
+			</div>
+		);
+	}
 }
