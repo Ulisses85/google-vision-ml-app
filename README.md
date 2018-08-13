@@ -17,3 +17,8 @@ Tech Used:
 - React (create-react-app)
 - Serverless functions (using Firebase Functions)
 - Async/await
+
+
+App deployed on Firebase hostng:
+
+https://vision-ml-react-app.firebaseapp.com/
