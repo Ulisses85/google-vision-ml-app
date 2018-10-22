@@ -1,12 +1,12 @@
 import firebase from 'firebase';
 // Initialize Firebase
 const config = {
-  apiKey: "AIzaSyAIwSiswyXPQ1GDINtslfXkk962IO1bnrE",
-  authDomain: "vision-ml-react-app.firebaseapp.com",
-  databaseURL: "https://vision-ml-react-app.firebaseio.com",
-  projectId: "vision-ml-react-app",
-  storageBucket: "vision-ml-react-app.appspot.com",
-  messagingSenderId: "591174605830"
+   apiKey: "AIzaSyB_6SrGB2EFrsf6sLUA-vkyVlgIUP1iAOM",
+    authDomain: "gl-ml-app.firebaseapp.com",
+    databaseURL: "https://gl-ml-app.firebaseio.com",
+    projectId: "gl-ml-app",
+    storageBucket: "gl-ml-app.appspot.com",
+    messagingSenderId: "159930080578"
 };
 
 firebase.initializeApp(config);
