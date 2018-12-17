@@ -19,6 +19,6 @@ Tech Used:
 - Async/await
 
 
-App deployed on Firebase hostng:
+App deployed on Firebase:
 
-https://vision-ml-react-app.firebaseapp.com/
+https://vision-project-e9eb0.firebaseapp.com
